@@ -1,21 +1,19 @@
 # DualCurrencyPortfolio
 
-**TODO: Add description**
+Бивалютный портфель.
 
-## Installation
+Программа, которая спрашивает у вас количество долларов с точностью до центов, количество рублей с точностью до копеек и какой сейчас курс доллара в рублях с точностью до копеек.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `dual_currency_portfolio` to your list of dependencies in `mix.exs`:
+Потом программа сообщает вам, сколько из ваших долларов надо обменять по курсу на рубли (или наоборот — сколько из ваших рублей обменять на доллары), чтобы портфель опять стал сбалансирован. Опять же, с точностью до копеек или центов.
 
-```elixir
-def deps do
-  [
-    {:dual_currency_portfolio, "~> 0.1.0"}
-  ]
-end
+```bash
+mix start_dual_currency
+
+Какой сейчас курс доллара?
+2
+Сколько у вас рублей?
+200
+Сколько у вас долларов?
+50
+Вам нужно купить USD 25.00
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/dual_currency_portfolio>.
-
