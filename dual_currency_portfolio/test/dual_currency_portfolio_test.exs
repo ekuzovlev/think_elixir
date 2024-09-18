@@ -5,9 +5,9 @@ defmodule DualCurrencyPortfolioTest do
   test "the portfolio is balanced" do
     input =
       """
-      1
-      100
-      100
+      1.00
+      100.00
+      100.00
       """
     assert capture_io([input: input], fn -> DualCurrencyPortfolio.main() end) ==
       """
@@ -22,8 +22,8 @@ defmodule DualCurrencyPortfolioTest do
     input =
       """
       92.34
-      1
-      999
+      1.00
+      999.00
       """
     assert capture_io([input: input], fn -> DualCurrencyPortfolio.main() end) ==
       """
@@ -37,9 +37,9 @@ defmodule DualCurrencyPortfolioTest do
   test "you need to buy dollars" do
     input =
       """
-      2
-      200
-      50
+      2.00
+      200.00
+      50.00
       """
     assert capture_io([input: input], fn -> DualCurrencyPortfolio.main() end) ==
       """
