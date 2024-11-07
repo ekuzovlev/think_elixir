@@ -18,4 +18,8 @@ defmodule PingPong.Server do
   def handle_call(:ping, _, state) do
     {:reply, {:pong, node()}, state}
   end
+
+  def handle_call(_other, _, state) do
+    {:reply, {:error, :allow_only_ping}, state}
+  end
 end
